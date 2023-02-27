@@ -46,8 +46,8 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
-  color: #ffffff;
+  background-color: #05080a;
+  color: #0055ff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -57,7 +57,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: lavender;
 }
 
 .error {
