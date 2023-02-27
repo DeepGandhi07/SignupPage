@@ -1,3 +1,8 @@
+function isValidEmail(email) {
+  const format = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return format.test(email);
+}
+format;
 function validateForm(event) {
   event.preventDefault(); // prevent form from submitting
 
@@ -10,7 +15,7 @@ function validateForm(event) {
   let isError = false;
   if (username === "") {
     document.getElementById("username-error").innerHTML =
-      "Please enter a username";
+      "Please Enter a username";
     isError = true;
   } else {
     document.getElementById("username-error").innerHTML = "";
@@ -18,11 +23,11 @@ function validateForm(event) {
 
   if (email === "") {
     document.getElementById("email-error").innerHTML =
-      "Please enter an email address";
+      "Please Enter an email address";
     isError = true;
   } else if (!isValidEmail(email)) {
     document.getElementById("email-error").innerHTML =
-      "Please enter a valid email address";
+      "Please Enter a valid email address";
     isError = true;
   } else {
     document.getElementById("email-error").innerHTML = "";
@@ -30,7 +35,7 @@ function validateForm(event) {
 
   if (password === "") {
     document.getElementById("password-error").innerHTML =
-      "Please enter a password";
+      "Please Enter a password";
     isError = true;
   } else if (password.length < 6) {
     document.getElementById("password-error").innerHTML =
@@ -45,9 +50,3 @@ function validateForm(event) {
     document.forms[0].submit();
   }
 }
-
-function isValidEmail(email) {
-  const format = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return format.test(email);
-}
-format;
